@@ -10,7 +10,7 @@ describe("Teste para o componente PostComment", () => {
 
   it("Deve inserir dois comentários", () => {
     const { debug } = render(<PostComment />);
-    const input = screen.getByTestId("input");
+    const input = screen.getByTestId("input") as HTMLInputElement;
 
     fireEvent.change(input, { target: { value: input.value.length > 0 } });
     fireEvent.click(screen.getByTestId("btn-adicionar-comentario"));
